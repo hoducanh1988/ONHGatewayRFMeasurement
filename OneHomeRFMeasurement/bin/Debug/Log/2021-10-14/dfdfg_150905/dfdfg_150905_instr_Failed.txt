@@ -1,0 +1,15 @@
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: Insufficient location information or the device or resource is not present in the system.  VISA error code -1073807343 (0xBFFF0011), ErrorResourceNotFound ---> NationalInstruments.VisaNS.VisaException: Insufficient location information or the device or resource is not present in the system.  VISA error code -1073807343 (0xBFFF0011), ErrorResourceNotFound
+   --- End of inner exception stack trace ---
+   at NationalInstruments.VisaNS.Internal.ErrorChecker.CheckStatusAndThrow(Int32 status, VisaHandle visaObject)
+   at NationalInstruments.VisaNS.Session..ctor(String resourceName, AccessModes accessMode, Int32 openTimeout, String expectedResourceName)
+   at NationalInstruments.VisaNS.MessageBasedSession..ctor(String resourceName, AccessModes accessMode, Int32 openTimeout, String expectedResourceName)
+   at NationalInstruments.VisaNS.TcpipSession..ctor(String resourceName, AccessModes accessMode, Int32 openTimeout, Boolean checkResourceType)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   at System.Activator.CreateInstance(Type type, Object[] args)
+   at NationalInstruments.VisaNS.ResourceManager.Open(String resourceName, AccessModes accessMode, Int32 openTimeout)
+   at NationalInstruments.VisaNS.ResourceManager.Open(String resourceName)
+   at OneHomeRFMeasurement.Assets.Protocol.GPIB`1.Open() in G:\Backup_Tool_Test\repos\08.OneHome\OneHomeRFMeasurement\OneHomeRFMeasurement\Assets\Protocol\GPIB.cs:line 25

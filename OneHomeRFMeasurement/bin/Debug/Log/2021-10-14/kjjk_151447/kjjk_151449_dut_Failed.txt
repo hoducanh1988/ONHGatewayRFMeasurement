@@ -1,0 +1,8 @@
+
+NXP i.MX Release Distro 4.9.11-1.0.0 HOME_GATEWAY_VNPT20 ttymxc0
+
+HOME_GATEWAY_VNPT20 login: root
+Password: 
+Login incorrect
+
+HOME_GATEWAY_VNPT20 login: 

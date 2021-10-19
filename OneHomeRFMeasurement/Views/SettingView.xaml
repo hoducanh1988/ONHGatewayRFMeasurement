@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="OneHomeRFMeasurement.Views.SettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OneHomeRFMeasurement.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+
+    <UserControl.Resources>
+
+        <Style TargetType="Label" x:Key="label_legend">
+            <Setter Property="FontSize" Value="{StaticResource fontSizeHeader}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="label_title">
+            <Setter Property="FontSize" Value="{StaticResource fontSizeNormal}"/>
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="{StaticResource fontSizeNormal}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="170,0,0,0"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="true">
+                    <Setter Property="Background" Value="{StaticResource color_mouseover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="{StaticResource fontSizeNormal}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="170,0,0,0"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="IsEditable" Value="True"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="true">
+                    <Setter Property="Background" Value="{StaticResource color_mouseover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,0,10,0">
+                <!--Instrument-->
+                <Label Style="{StaticResource label_legend}" Content="Cấu hình tham số máy đo RF :"/>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Địa chỉ GPIB"/>
+                    <TextBox Text="{Binding Path=SM.instrAddress}"/>
+                </Grid>
+
+                <!--DUT-->
+                <Label Style="{StaticResource label_legend}" Margin="0,20,0,0" Content="Cấu hình tham số DUT :"/>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Tên cổng com"/>
+                    <ComboBox ItemsSource="{Binding collectionSerialPort}" Text="{Binding Path=SM.dutAddress}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Tốc độ baud"/>
+                    <ComboBox ItemsSource="{Binding collectionBaudRate}" Text="{Binding Path=SM.dutBaudRate}"/>
+                </Grid>
+                <Grid Visibility="Collapsed">
+                    <Label Style="{StaticResource label_title}" Content="Log user"/>
+                    <TextBox Text="{Binding Path=SM.dutLogUser}"/>
+                </Grid>
+                <Grid Visibility="Collapsed">
+                    <Label Style="{StaticResource label_title}" Content="Log password"/>
+                    <TextBox Text="{Binding Path=SM.dutLogPassword}"/>
+                </Grid>
+
+                <!--DUT-->
+                <Label Style="{StaticResource label_legend}" Margin="0,20,0,0" Content="Cấu hình tham số khác :"/>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Đường dẫn script excel"/>
+                    <TextBox Margin="170,0,30,0" IsReadOnly="True" Text="{Binding Path=SM.scriptFile}"/>
+                    <Button Command="{Binding BrowseScriptCommand}" Width="30" HorizontalAlignment="Right" Content="..."/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Execel sheet name"/>
+                    <ComboBox ItemsSource="{Binding collectionSheetName, UpdateSourceTrigger=PropertyChanged}" Text="{Binding Path=SM.sheetName, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_title}" Content="Đường dẫn file suy hao"/>
+                    <TextBox Margin="170,0,30,0" IsReadOnly="True" Text="{Binding Path=SM.pathlossFile}"/>
+                    <Button Command="{Binding BrowsePathlossCommand}" Width="30" HorizontalAlignment="Right" Content="..."/>
+                </Grid>
+                
+                <Label Content="" Margin="0,0,0,30"/>
+
+            </StackPanel>
+            
+        </ScrollViewer>
+
+        <Button Command="{Binding SaveCommand}" FontSize="{StaticResource fontSizeButton}" FontWeight="SemiBold" Grid.Row="1" Content="Save Setting"/>
+
+    </Grid>
+    
+</UserControl>

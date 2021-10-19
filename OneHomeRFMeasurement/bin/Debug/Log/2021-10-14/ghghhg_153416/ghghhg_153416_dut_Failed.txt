@@ -1,0 +1,21 @@
+
+NXP i.MX Release Distro 4.9.11-1.0.0 HOME_GATEWAY_VNPT20 ttymxc0
+
+HOME_GATEWAY_VNPT20 login: root
+Password: 
+root@HOME_GATEWAY_VNPT20:~# cd /etc/systemd/system/
+root@HOME_GATEWAY_VNPT20:/etc/systemd/system# systemctl stop OH*
+root@HOME_GATEWAY_VNPT20:/etc/systemd/system# killall node
+killall: node: no process killed
+root@HOME_GATEWAY_VNPT20:/etc/systemd/system# cd /home/root/FirmwareGateway/gate way/adapter/Test_BLE
+root@HOME_GATEWAY_VNPT20:~/FirmwareGateway/gateway/adapter/Test_BLE# python Test _BLE.py
+Read Try
+BQB TEST BLE ^_^!
+Vui long nhap command test:
+command: "plugin mfglib set- frequency 2402"
+command: "plugin mfglib set- frequency 2440"
+command: "plugin mfglib set- frequency 2480"
+command: "plugin mfglib check"
+"plugin mfglib set- frequency 2402"
+Da nhan command: plugin mfglib set- frequency 2402
+Vui long nhap command test:

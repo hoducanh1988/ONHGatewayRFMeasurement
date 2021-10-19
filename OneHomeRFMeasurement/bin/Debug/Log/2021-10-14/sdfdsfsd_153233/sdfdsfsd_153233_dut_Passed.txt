@@ -1,0 +1,87 @@
+
+NXP i.MX Release Distro 4.9.11-1.0.0 HOME_GATEWAY_VNPT20 ttymxc0
+
+HOME_GATEWAY_VNPT20 login: root
+Password: 
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 up
+ifconfig: SIOCGIFFLAGS: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_start
+Interface doesn't accept private ioctl...
+mp_start: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_channel 1
+Interface doesn't accept private ioctl...
+mp_channel: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+Interface doesn't accept private ioctl...
+mp_bandwidth: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ant_tx a
+Interface doesn't accept private ioctl...
+mp_ant_tx: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_txpower patha=32
+Interface doesn't accept private ioctl...
+mp_txpower: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_rate 22
+Interface doesn't accept private ioctl...
+mp_rate: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx background,cs
+Interface doesn't accept private ioctl...
+mp_ctx: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx stop
+Interface doesn't accept private ioctl...
+mp_ctx: No such device
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_stop
+Interface doesn't accept private ioctl...
+mp_stop: Network is down
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 down
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 up
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_start
+wlan0    mp_start:mp_start ok
+
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_channel 6
+wlan0    mp_channel:Change channel 1 to channel 6
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+wlan0    mp_bandwidth:Change BW 0 to BW 0
+
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ant_tx a
+wlan0    mp_ant_tx:switch Tx antenna to a
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_txpower patha=32
+wlan0    mp_txpower:Set power level path_A:32 path_B:0 path_C:0 path_D:0
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_rate 22
+wlan0    mp_rate:Set data rate to 22 index 3
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx background,cs
+wlan0    mp_ctx:
+Start continuous DA=ffffffffffff len=1500
+ infinite=yes.
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx stop
+wlan0    mp_ctx:Stop continuous Tx
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_stop
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 down
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 up
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_start
+wlan0    mp_start:mp_start ok
+
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_channel 11
+wlan0    mp_channel:Change channel 1 to channel 11
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+wlan0    mp_bandwidth:Change BW 0 to BW 0
+
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ant_tx a
+wlan0    mp_ant_tx:switch Tx antenna to a
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_txpower patha=32
+wlan0    mp_txpower:Set power level path_A:32 path_B:0 path_C:0 path_D:0
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_rate 22
+wlan0    mp_rate:Set data rate to 22 index 3
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx background,cs
+wlan0    mp_ctx:
+Start continuous DA=ffffffffffff len=1500
+ infinite=yes.
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_ctx stop
+wlan0    mp_ctx:Stop continuous Tx
+root@HOME_GATEWAY_VNPT20:~# rtwpriv wlan0 mp_stop
+root@HOME_GATEWAY_VNPT20:~# ifconfig wlan0 down
+root@HOME_GATEWAY_VNPT20:~# exit
+logout
+
+NXP i.MX Release Distro 4.9.11-1.0.0 HOME_GATEWAY_VNPT20 ttymxc0
+
+HOME_GATEWAY_VNPT20 login: 

@@ -1,0 +1,7 @@
+
+
+HOME_GATEWAY_VNPT20 login: root
+Password: 
+Login incorrect
+
+HOME_GATEWAY_VNPT20 login: 

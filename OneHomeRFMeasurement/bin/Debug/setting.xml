@@ -1,0 +1,10 @@
+﻿<SettingModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <instrAddress>TCPIP0::192.168.1.2::hislip0::INSTR</instrAddress>
+  <dutAddress>COM10</dutAddress>
+  <dutBaudRate>115200</dutBaudRate>
+  <dutLogUser />
+  <dutLogPassword />
+  <scriptFile>Gateway_v1.2_Test_Bluetooth.xlsx</scriptFile>
+  <sheetName>anritsu</sheetName>
+  <pathlossFile>StationCal_pathloss.xml</pathlossFile>
+</SettingModel>

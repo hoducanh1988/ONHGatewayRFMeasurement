@@ -1,0 +1,72 @@
+SYST:LANG SCPI
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:SEGM:CLE
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:SEGM:APP BLE
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:TRIG LEVEL
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:TDEL -1E-05
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:TLEV -20
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:CAPT:MODE PACKET
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:TTIM 1
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:PACK 10
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:BLE:MODE STANDARD
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:BLE:PAYL PRBS9
+:SYSTem:ERRor?
+0,"No error"
+
+:CONFigure:SRWireless:BLE:PLENgth 63
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:SEL:BLE:POW ON
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:SEL:BLE:CDR ON
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:SEL:BLE:MOD ON
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:FREQ 2402000000
+:SYSTem:ERRor?
+0,"No error"
+
+:ROUT:PORT:CONN:DIR PORT1,PORT1
+:SYSTem:ERRor?
+0,"No error"
+
+:CONF:SRW:ALEV:TIME 0.01
+:SYSTem:ERRor?
+0,"No error"
+

@@ -1,0 +1,7 @@
+
+Khong ho tro command! Vui long thu lai! an phim 'q' de thoat truong trinh!
+command: "plugin mfglib set- frequency 2402"
+command: "plugin mfglib set- frequency 2440"
+command: "plugin mfglib set- frequency 2480"
+command: "plugin mfglib check"
+Vui long nhap command test:
